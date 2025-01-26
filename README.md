@@ -19,16 +19,17 @@ To install `rofi` on Arch Linux-based systems, use:
 
 ```bash
 sudo pacman -S rofi
-
+```
 # Setup
 1. Clone or Download the script
-2. Configure Waybar in (~/.config/waybar/waybar.jsonc) add "custom/todo" in modules-(left/right)
-3. add this in waybar.jsonc file
-```json
+2. Configure Waybar in (~/.config/waybar/waybar.jsonc or ~/.config/waybar/waybar.json ) add "custom/todo" in modules-(left/right)
+3. add this in waybar.jsonc/waybar.json file
+```json/jsonc
 "custom/todo": {
-    "exec": "echo todo.sh",
+    "exec": "echo to-do",
     "click": "bash /path/to/todo.sh show",
     "interval": 300,
     "tooltip": "Click to view" #although i dont know if this really works
 }
+```
 ### Make the .sh file executable using chmod
